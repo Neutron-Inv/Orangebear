@@ -25,3 +25,16 @@
   font-weight: 300;
   font-style: normal;
 }
+
+.fade {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.blend-overlay {
+  mix-blend-mode: darken;
+}

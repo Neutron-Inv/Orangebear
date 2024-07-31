@@ -1,12 +1,14 @@
-import Header from '../components/Header';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import React from 'react';
+import AboutUs from '../components/AboutUs';
 
 function About() {
   return (
     <div>
-    <Header/>
-      <h1>About Us</h1>
-      <p>Learn more about our company.</p>
+    <Navbar />
+    <AboutUs />
+      <Footer />
     </div>
   );
 }

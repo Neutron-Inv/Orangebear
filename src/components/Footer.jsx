@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function ServicesSection() {
+export default function Footer() {
   return (
     <div className="bg-accentblue py-14">
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4 p-8 md:p-16 mx-4 md:mx-16 font-light">
@@ -51,7 +51,7 @@ export default function ServicesSection() {
           </ul>
         </div>
         <div className="col-span-1 md:col-span-2 space-y-6 md:space-y-10 text-white ml-4 font-pp-neue-machina">
-          <div className="flex flex-col items-center w-full md:w-10/12 h-full border-4 rounded-3xl p-4 md:p-6 md:mt-6 shadow-buttonshadow">
+          <div className="flex flex-col items-center w-full md:min-w-[10rem] h-full border-4 rounded-3xl p-4 md:p-6 md:mt-6 shadow-buttonshadow">
             <h3 className="text-lg md:text-xl text-center font-thin mb-2">Newsletter</h3>
             <p className="text-center font-bold text-lg md:text-xl">
               Sign Up for a monthly <span className="text-accentorange">"Bear hug"</span>
