@@ -1,10 +1,14 @@
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import React from 'react';
+import Explore from '../components/Explore';
 
 function Services() {
   return (
     <div>
-      <h1>Error 404</h1>
-      <p>Page No found</p>
+    <Navbar />
+    <Explore />
+      <Footer />
     </div>
   );
 }

@@ -1,10 +1,14 @@
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import React from 'react';
+import Support from '../components/Support';
 
 function Contact() {
   return (
     <div>
-      <h1 className="text-center text-green-600 text-balance">Contact Us</h1>
-      <p>Get in touch with us!</p>
+    <Navbar />
+    <Support />
+      <Footer />
     </div>
   );
 }

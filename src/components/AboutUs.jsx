@@ -46,7 +46,7 @@ export default function AboutUs(){
         </p>
         </div>
         </div>
-        <div className="p-16">
+        <div className="p-16 pt-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-0 md:p-16 mx-4 md:mx-0 font-light font-pp-neue-machina w-10/12">
         <div className="group border-2 rounded-2xl shadow-skybuttonshadow border-accentblue pl-10 pt-16 pr-10 pb-1 transition-all duration-300 hover:bg-accentblue hover:shadow-orangebuttonshadow">
         <div className="lg:mb-8 mb-8">
