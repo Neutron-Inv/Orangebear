@@ -14,10 +14,10 @@ export default function Navbar() {
             <Link to="/about" className="text-white hover:text-gray-300">About</Link>
           </li>
           <li>
-            <Link to="/services" className="text-white hover:text-gray-300">Explore</Link>
+            <Link to="/explore" className="text-white hover:text-gray-300">Explore</Link>
           </li>
           <li>
-            <Link to="/contact" className="text-white hover:text-gray-300">Support</Link>
+            <Link to="/support" className="text-white hover:text-gray-300">Support</Link>
           </li>
         </ul>
       </div>

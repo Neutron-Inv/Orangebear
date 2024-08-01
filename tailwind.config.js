@@ -20,6 +20,9 @@ module.exports = {
         'extra-bold': '800',
         'black': '900',
       },
+      transform: {
+        'scale-105-translate': 'scale(1.05) translate(5%, 5%)',
+      },
     },
   },
   plugins: [],
