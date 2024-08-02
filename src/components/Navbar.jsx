@@ -22,7 +22,7 @@ export default function Navbar() {
             <FaBars />
           </button>
         </div>
-        <ul className="invisible md:visible absolute md:relative md:flex space-x-28 mr-2 text-xs">
+        <ul className="invisible md:visible absolute md:relative md:flex space-x-28 mr-5 text-xs">
           <li>
             <Link to="/" className="text-white hover:text-gray-300">Home</Link>
           </li>
