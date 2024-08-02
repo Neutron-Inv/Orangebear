@@ -24,7 +24,7 @@ export default function Services() {
       {services.map((service, index) => (
         <div
           key={index}
-          className={`group border-2 rounded-2xl shadow-skybuttonshadow border-accentblue p-6 pb-0 md:p-10 transition-all duration-300 cursor-pointer md:hover:bg-accentblue md:hover:shadow-orangebuttonshadow ${expanded === index ? "bg-accentblue shadow-orangebuttonshadow" : ""}`}
+          className={`group border-2 rounded-2xl shadow-skybuttonshadow border-accentblue min-h-24 p-6 pb-0 md:p-10 transition-all duration-300 cursor-pointer md:hover:bg-accentblue md:hover:shadow-orangebuttonshadow ${expanded === index ? "bg-accentblue shadow-orangebuttonshadow" : ""}`}
           onClick={() => toggleExpand(index)}
         >
           <div className="absolute mt-4 -mr-8 md:mt-0 md:mr-0 md:relative mb-8">

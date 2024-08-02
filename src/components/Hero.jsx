@@ -4,8 +4,8 @@ import Heroimage from "../images/heroimage.png";
 export default function Hero() {
   return (
     <div className="grid grid-cols-1 md:gap-4 p-0 md:p-0 mx-0 md:mx-0 font-light">
-      <div className="flex flex-col w-full font-pp-neue-machina h-50 mx-0">
-        <img src={Heroimage} alt="hero" className="w-full object-cover rounded-lg" />
+      <div className="flex flex-col w-full font-pp-neue-machina mx-0">
+        <img src={Heroimage} alt="hero" className="w-full object-cover rounded-lg max-h-[500px]" />
       </div>
       <div className="flex flex-col space-y-6 md:space-y-10 w-full font-pp-neue-machina lg:pl-10">
         <span className="hidden invisible md:visible text-sm md:text-base">Blog Post</span>
