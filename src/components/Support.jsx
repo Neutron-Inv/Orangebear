@@ -1,25 +1,21 @@
 import React from "react";
-import Team1 from "../images/team1.png";
-import Team2 from "../images/team2.png";
-import Team3 from "../images/team3.png";
-import Team4 from "../images/team4.png";
 
 export default function Support(){
     return(
         <div >
-        <div className="p-16">
+        <div className="md:p-16 p-4x">
         <div className="p-8 font-pp-neue-machina">
-            <span className="font-bold text-3xl text-accentorange">We’d Be Thrilled To Hear From You!</span><br/>
+            <span className="font-bold md:text-3xl text-2xl text-accentorange">We’d Be Thrilled To Hear From You!</span><br/>
         <p className="text-sm mb-3 mt-10 text-gray-500 leading-4">Drop your inquiries using the form, and we would get back to you <br/>
         as soon as possible
         </p>
         </div>
 
 
-        <div className="group border-2 rounded-2xl shadow-skybuttonshadow border-accentblue pl-10 pt-16 pr-10 pb-1">
+        <div className="group md:border-2 md:rounded-2xl shadow-skybuttonshadow border-accentblue pl-10 pt-16 pr-10 pb-1">
             <div className="lg:mb-4 mb-4 pb-16">
             <h3 className="font-bold text-2xl text-accentblue mb-16 md:min-h-[2.5rem]">Leave Us A Message</h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div> 
                 <input placeholder="Preferred Name" className="w-full text-xs p-4 pl-6 my-2 border rounded-2xl bg-gray-300"/>
                 
@@ -31,7 +27,7 @@ export default function Support(){
                     Send
                 </button>
                 </div>
-                <div className="text-sm items-center mx-auto my-auto leading-4 font-pp-neue-machina">
+                <div className="text-sm md:items-center md:mx-auto my-auto pt-10 md:pt-0 leading-4 font-pp-neue-machina">
                 <div className="leading-3">
                     We take calls on:<br/>
                     <span className="font-bold text-lg">+234 902 370 4924</span><br />

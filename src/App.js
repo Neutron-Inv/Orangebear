@@ -10,7 +10,7 @@ import NoPage from './pages/NoPage';
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="App overflow-x-hidden">
         <Routes>
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />

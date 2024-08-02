@@ -1,79 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function Services(){
-    return(
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 p-8 md:p-16 mx-4 md:mx-4 font-light font-pp-neue-machina">
-        <div className="p-8">
-            <p className="text-3xl mb-3">Our Services</p>
-            <span className="font-bold text-6xl text-accentblue">To BE is <br/> to DO</span>
-        </div>
-        <div className="group border-2 rounded-2xl shadow-skybuttonshadow border-accentblue pl-10 pt-16 pr-10 pb-1 transition-all duration-300 hover:bg-accentblue hover:shadow-orangebuttonshadow">
-        <div className="lg:mb-8 mb-8">
-            <span className="text-accentorange font-bold text-3xl rounded-full p-3 bg-accentblue transition-all duration-350 group-hover:bg-accentorange group-hover:text-white">01</span>
-        </div>
-        <div className="lg:mb-4 mb-4 pb-16">
-            <h3 className="font-bold text-2xl text-accentblue mb-16 transition-all duration-500 group-hover:text-white md:min-h-[2.5rem]">Digital Marketing</h3>
-            <span>
-            <p className="transition-all duration-300 group-hover:text-white text-xs">
-            We offer a comprehensive range of digital marketing services...
-            </p>
-            </span>
-        </div>
-        </div>
-        <div className="group border-2 rounded-2xl shadow-skybuttonshadow border-accentblue pl-10 pt-16 pr-10 pb-1 transition-all duration-300 hover:bg-accentblue hover:shadow-orangebuttonshadow">
-        <div className="lg:mb-8 mb-8">
-            <span className="text-accentorange font-bold text-3xl rounded-full p-3 bg-accentblue transition-all duration-350 group-hover:bg-accentorange group-hover:text-white">02</span>
-        </div>
-        <div className="lg:mb-4 mb-4 pb-16">
-            <h3 className="font-bold text-2xl text-accentblue mb-16 transition-all duration-500 group-hover:text-white md:max-h-[2.5rem]">Social Media Management</h3>
-            <span>
-            <p className="transition-all duration-300 group-hover:text-white text-xs">
-            We help businesses develop effective social media strategies and manage their social media presence...
-            </p>
-            </span>
-        </div>
-        </div>
+export default function Services() {
+  const [expanded, setExpanded] = useState(null);
 
+  const toggleExpand = (index) => {
+    setExpanded(expanded === index ? null : index);
+  };
 
-        <div className="group border-2 rounded-2xl shadow-skybuttonshadow border-accentblue pl-10 pt-16 pr-10 pb-5 transition-all duration-300 hover:bg-accentblue hover:shadow-orangebuttonshadow">
-        <div className="lg:mb-8 mb-8">
-            <span className="text-accentorange font-bold text-3xl rounded-full p-3 bg-accentblue transition-all duration-350 group-hover:bg-accentorange group-hover:text-white">03</span>
-        </div>
-        <div className="lg:mb-4 mb-4 pb-16">
-            <h3 className="font-bold text-2xl text-accentblue mb-16 transition-all duration-500 group-hover:text-white md:max-h-[2.5rem]">Web/App Development</h3>
-            <span>
-            <p className="transition-all duration-300 group-hover:text-white text-xs">
-                We design and develop professional and user friendly websites and mobile apps that align with our clients' brand and business goals...
+  const services = [
+    { title: "Digital Marketing", description: "We offer a comprehensive range of digital marketing services..." },
+    { title: "Social Media Management", description: "We help businesses develop effective social media strategies and manage their social media presence..." },
+    { title: "Web/App Development", description: "We design and develop professional and user-friendly websites and mobile apps that align with our clients' brand and business goals..." },
+    { title: "Data Analytics & Insights", description: "We help you harness the power of data by implementing advanced analytics tools and techniques..." },
+    { title: "CRM Implementation", description: "We assist businesses in implementing Customer Relationship Management systems to streamline their sales..." }
+  ];
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-2 p-8 md:p-16 mx-0 md:mx-4 font-light font-pp-neue-machina">
+      <div className="md:p-8 pb-6 md:pb-0">
+        <p className="md:text-3xl text-2xl mb-3">Our Services</p>
+        <span className="font-bold md:text-6xl text-2xl text-accentblue">To BE is <br className="hidden md:block" />to DO</span>
+      </div>
+      {services.map((service, index) => (
+        <div
+          key={index}
+          className={`group border-2 rounded-2xl shadow-skybuttonshadow border-accentblue p-6 pb-0 md:p-10 transition-all duration-300 cursor-pointer md:hover:bg-accentblue md:hover:shadow-orangebuttonshadow ${expanded === index ? "bg-accentblue shadow-orangebuttonshadow" : ""}`}
+          onClick={() => toggleExpand(index)}
+        >
+          <div className="absolute mt-4 -mr-8 md:mt-0 md:mr-0 md:relative mb-8">
+            <span className={`text-accentorange font-bold md:text-3xl text-xl rounded-full p-3 bg-accentblue transition-all duration-350 group-hover:bg-accentorange group-hover:text-white ${expanded === index ? "bg-accentorange text-white" : ""}`}>{`0${index + 1}`}</span>
+          </div>
+          <div className="mb-4 ml-16 md:ml-0">
+            {/* Show title for desktop and mobile when not expanded */}
+            <h3 className={`font-bold text-xl md:text-2xl text-accentblue md:mb-16 transition-all duration-500 group-hover:text-white ${expanded === index ? "md:block hidden" : ""}`}>
+              {service.title}
+            </h3>
+            {/* Show description only on mobile when expanded */}
+            {expanded === index && (
+              <p className="transition-all duration-300 group-hover:text-white text-xs md:hidden min-h-14">
+                {service.description}
+              </p>
+            )}
+            {/* Show description for desktop */}
+            <p className={`transition-all duration-300 group-hover:text-white text-xs invisible h-0 absolute md:relative md:visible md:h-auto lg:block`}>
+              {service.description}
             </p>
-            </span>
+          </div>
         </div>
-        </div>
-        <div className="group border-2 rounded-2xl shadow-skybuttonshadow border-accentblue pl-10 pt-16 pr-10 pb-5 transition-all duration-300 hover:bg-accentblue hover:shadow-orangebuttonshadow">
-        <div className="lg:mb-8 mb-8">
-            <span className="text-accentorange font-bold text-3xl rounded-full p-3 bg-accentblue transition-all duration-350 group-hover:bg-accentorange group-hover:text-white">04</span>
-        </div>
-        <div className="lg:mb-4 mb-4 pb-16">
-            <h3 className="font-bold text-2xl text-accentblue mb-16 transition-all duration-500 group-hover:text-white md:max-h-[2.5rem]">Data Analytics & Insights</h3>
-            <span>
-            <p className="transition-all duration-300 group-hover:text-white text-xs">
-            We help you harness the power of data by implementing advanced analytics tools and techniques...
-            </p>
-            </span>
-        </div>
-        </div>
-        <div className="group border-2 rounded-2xl shadow-skybuttonshadow border-accentblue pl-10 pt-16 pr-10 pb-5 transition-all duration-300 hover:bg-accentblue hover:shadow-orangebuttonshadow">
-        <div className="lg:mb-8 mb-8">
-            <span className="text-accentorange font-bold text-3xl rounded-full p-3 bg-accentblue transition-all duration-350 group-hover:bg-accentorange group-hover:text-white">05</span>
-        </div>
-        <div className="lg:mb-4 mb-4 pb-16">
-            <h3 className="font-bold text-2xl text-accentblue mb-16 transition-all duration-500 group-hover:text-white md:max-h-[2.5rem]">CRM Implementation</h3>
-            <span>
-            <p className="transition-all duration-300 group-hover:text-white text-xs">
-            We assist businesses in implementing Customer Relationship Management systems to streamline their sales...
-            </p>
-            </span>
-        </div>
-        </div>
-        </div>
-    )
+      ))}
+    </div>
+  );
 }
