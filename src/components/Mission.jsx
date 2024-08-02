@@ -44,7 +44,7 @@ export default function Mission(){
             </div>
     
         </div>
-        <div className="invisible md:visible md:flex md:justify-center md:items-center font-pp-neue-machina -mt-40 md:mt-0 md:pb-20">
+        <div className="invisible md:visible md:flex md:justify-center md:items-center font-pp-neue-machina -mt-40 md:-mt-20 md:pb-20">
             <div className="flex flex-col justify-center items-center font-pp-neue-machina">
             <h2 className="text-5xl text-accentorange font-bold">Trusted by Our Clients</h2><br/>
             <p className="text-md text-gray-500"> we have been able to put a smile on our clients' faces</p>

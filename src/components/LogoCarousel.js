@@ -26,7 +26,7 @@ const LogoCarousel = () => {
     }, [images.length]);
   
     return (
-      <div className="flex items-center justify-center w-full bg-gray-300 h-64">
+      <div className="flex items-center justify-center w-full bg-gray-300 h-44">
         <img
           src={images[currentIndex]}
           alt="Logo"
