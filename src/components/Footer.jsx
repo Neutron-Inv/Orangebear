@@ -1,10 +1,46 @@
 import React from 'react';
+import { useState } from "react";
 import { Link } from 'react-router-dom';
 import Ig from "../images/ig.png";
 import Fb from "../images/fb.png";
 import Twitter from "../images/twitter.png";
 
 export default function Footer() {
+
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    
+    if (!email) {
+      setMessage("Please enter an email address.");
+      return;
+    }
+
+    try {
+      const response = await fetch("https://orangebearltd.com/api/subscribe.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        mode:'cors',
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+      console.log(response);
+      if (response.ok) {
+        alert("Subscribed successfully!");
+        setEmail(""); // Clear the email input
+      } else {
+        alert(data.message || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      alert("Failed to subscribe. Please try again later.");
+    }
+  };
+
   return (
     <div className="bg-accentblue md:py-14 pb-14 pt-5">
      <div className="md:hidden col-span-1 space-y-6 text-white font-pp-neue-machina mb-10">
@@ -16,9 +52,11 @@ export default function Footer() {
             <input
               type="email"
               placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="rounded-3xl bg-slate-500/30 w-11/12 h-14 px-4 md:px-10 text-sm place-self-center mt-4"
             />
-            <button className="text-white bg-accentorange w-7/12 h-14 font-bold text-lg md:text-2xl rounded-3xl mt-5 shadow-buttonshadow transition duration-700 hover:scale-125 hover:bg-accentblue hover:shadow-orangebuttonshadow">
+            <button onClick={handleSubscribe} className="text-white bg-accentorange w-7/12 h-14 font-bold text-lg md:text-2xl rounded-3xl mt-5 shadow-buttonshadow transition duration-700 hover:scale-125 hover:bg-accentblue hover:shadow-orangebuttonshadow">
               Subscribe
             </button>
           </div>
@@ -84,9 +122,14 @@ export default function Footer() {
             <input
               type="email"
               placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="rounded-3xl bg-slate-500/30 w-full md:w-11/12 h-10 md:h-14 px-4 md:px-10 place-self-center mt-4"
             />
-            <button className="text-white bg-accentorange w-full md:w-2/3 h-10 md:h-14 font-bold text-lg md:text-2xl rounded-3xl mt-5 shadow-buttonshadow transition duration-700 hover:scale-105 hover:bg-accentblue hover:shadow-orangebuttonshadow">
+            <button
+              onClick={handleSubscribe}
+              className="text-white bg-accentorange w-full md:w-2/3 h-10 md:h-14 font-bold text-lg md:text-2xl rounded-3xl mt-5 shadow-buttonshadow transition duration-700 hover:scale-105 hover:bg-accentblue hover:shadow-orangebuttonshadow"
+            >
               Subscribe
             </button>
           </div>
