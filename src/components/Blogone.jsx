@@ -92,7 +92,6 @@ export default function Blogone(){
         </div>
 
         </div>
-        <div></div>
         </div>
     )
 }
