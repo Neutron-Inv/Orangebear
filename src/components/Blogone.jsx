@@ -90,7 +90,7 @@ export default function Blogone(){
           <p className="flex md:items-center lg:px-8 p-4"><Link to="/blog3"><b>Micro-Moments: How to Optimize Content for Mobile-First Audiences</b></Link></p>
         </div>
         </div>
-
+<div></div>
         </div>
         </div>
     )
