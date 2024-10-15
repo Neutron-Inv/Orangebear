@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to OrangeBear!</title>
+    <style>
+        /* Reset styles */
+        body, p, div {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            color: #555555;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background-color: #ffffff;
+            margin: 20px auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #243754;
+            padding: 20px;
+            text-align: center;
+        }
+        .header img {
+            max-width: 150px;
+            height: auto;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content h1 {
+            color: #243754;
+            margin-bottom: 10px;
+        }
+        .bear{
+            color: #fd9300;
+        }
+        .content p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #fd9300;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .footer {
+            background-color: #243754;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+        }
+        .footer a {
+            color: #fd9300;
+            text-decoration: none;
+        }
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100% !important;
+            }
+            .header img {
+                max-width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Logo -->
+        <div class="header">
+            <img src="https://orangebearltd.com/logo.png" alt="OrangeBear Logo" width="70">
+        </div>
+        
+        <!-- Email Content -->
+        <div class="content">
+            <p>Dear {{name}},
+            </p>
+            <p>Thank you for contacting OrangeBear Ltd! We have received your message and one of our team members will get back to you within the next 24-48 hours.</p>
+            <p>If your inquiry is urgent, please feel free to reach us directly at 09023704924 or <a href="mailto:support@orangebear.com">info@orangebearltd.com</a>
+            </p>
+            <p>We look forward to helping you achieve your marketing and branding goals!
+            </p>
+            <!-- Optional Call-to-Action Button -->
+            <!-- <a href="https://yourdomain.com" class="cta-button">Visit Our Website</a> -->
+            <p>Best Regards,<br>The OrangeBear Ltd. Team</p>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; <?= date('Y') ?> OrangeBear. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

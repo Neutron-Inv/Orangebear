@@ -110,7 +110,7 @@ export default function AboutUs(){
         <div className="bg-accentorange text-center text-sm leading-4 py-8 mb-0 min-h-24 md:h-auto pt-16 md:pt-8"><div className="md:hidden absolute -mt-9 ml-2 grayscale w-24 h-24 p-2"><img className="rounded-full" src={Team1} alt="hero"/></div><span className="font-bold align-middle">Joshua Chukwuzubelu</span> <br/>Chief Executive Officer</div>
         <div className="bg-accentorange text-center text-sm leading-4 py-8 mb-0 min-h-24 md:h-auto"><span className="font-bold">Emeka Nwachi</span> <br/>Creative Director<div className="md:hidden absolute -mt-[68px] right-5 grayscale w-24 h-24 p-2"><img className="rounded-full" src={Team2} alt="hero"/></div></div>
         <div className="bg-accentorange text-center text-sm leading-4 py-8 mb-0 min-h-24 md:h-auto"><div className="md:hidden absolute -mt-9 ml-2 grayscale w-24 h-24 p-2"><img className="rounded-full" src={Team3} alt="hero"/></div><span className="font-bold">Divine Awazie</span> <br/>Business Strategist</div>
-        <div className="bg-accentorange text-center text-sm leading-4 py-8 mb-0 min-h-24 md:h-auto pb-16 md:pb-0"><span className="font-bold">Ayoola David</span> <br/>Tech Lead<div className="md:hidden absolute -mt-[68px] right-5 grayscale w-24 h-24 p-2"><img className="rounded-full" src={Team4} alt="hero"/></div></div>
+        <div className="bg-accentorange text-center text-sm leading-4 py-8 mb-0 min-h-24 md:h-auto pb-16 md:pb-0"><span className="font-bold">Emmanuel Idowu</span> <br/>Tech Lead<div className="md:hidden absolute -mt-[68px] right-5 grayscale w-24 h-24 p-2"><img className="rounded-full" src={Team4} alt="hero"/></div></div>
         </div>
         </div>
     )
