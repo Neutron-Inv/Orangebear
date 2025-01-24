@@ -8,7 +8,7 @@ import Twitter from "../images/twitter.png";
 export default function Footer() {
 
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  // const [message, setMessage] = useState("");
 
   const handleSubscribe = async (e) => {
     e.preventDefault();
