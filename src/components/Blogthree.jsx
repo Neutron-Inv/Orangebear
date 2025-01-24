@@ -5,18 +5,18 @@ import Heroimage3 from "../images/article3.png";
 import { Link } from "react-router-dom";
 
 export default function Blogthree(){
-  const [expanded, setExpanded] = useState(null);
+  // const [expanded, setExpanded] = useState(null);
 
-  const toggleExpand = (index) => {
-    setExpanded(expanded === index ? null : index);
-  };
+  // const toggleExpand = (index) => {
+  //   setExpanded(expanded === index ? null : index);
+  // };
 
-  const services = [
-    { title: "Client-Centric Innovation", description: "We design and develop professional and user-friendly websites and mobile apps that align with our clients’ brand and business goals..." },
-    { title: "Tailored Excellence", description: "We design and develop professional and user-friendly websites and mobile apps that align with our clients’ brand and business goals..." },
-    { title: "Collaborative Expertise", description: "We design and develop professional and user-friendly websites and mobile apps that align with our clients’ brand and business goals..." },
-    { title: "Ethical Integrity", description: "We design and develop professional and user-friendly websites and mobile apps that align with our clients’ brand and business goals..." }
-  ];
+  // const services = [
+  //   { title: "Client-Centric Innovation", description: "We design and develop professional and user-friendly websites and mobile apps that align with our clients’ brand and business goals..." },
+  //   { title: "Tailored Excellence", description: "We design and develop professional and user-friendly websites and mobile apps that align with our clients’ brand and business goals..." },
+  //   { title: "Collaborative Expertise", description: "We design and develop professional and user-friendly websites and mobile apps that align with our clients’ brand and business goals..." },
+  //   { title: "Ethical Integrity", description: "We design and develop professional and user-friendly websites and mobile apps that align with our clients’ brand and business goals..." }
+  // ];
     return(
         <div >
         <div className="md:p-0 p-0">
